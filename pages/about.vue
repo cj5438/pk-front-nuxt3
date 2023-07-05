@@ -64,10 +64,10 @@
 </template>
 
 <script lang="ts" setup>
-import bg from 'public/assets/images/about.png'
-import building from 'public/assets/images/building.jpg'
-import work from 'public/assets/images/work.png'
-import work1 from 'public/assets/images/work1.png'
+import bg from 'assets/images/about.png'
+import building from 'assets/images/building.jpg'
+import work from 'assets/images/work.png'
+import work1 from 'assets/images/work1.png'
 
 import type { PartnerType } from '@/components/types'
 

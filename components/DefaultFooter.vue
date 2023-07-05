@@ -68,8 +68,8 @@
 </template>
 
 <script setup lang="ts">
-import wechat from 'public/assets/images/wechat.jpg'
-import sina from 'public/assets/images/sina.jpg'
+import wechat from 'assets/images/wechat.jpg'
+import sina from 'assets/images/sina.jpg'
 
 interface LinkType {
   title: string
@@ -118,7 +118,7 @@ withDefaults(defineProps<FootItem>(), {
 
 <style scoped>
 i {
-  background-image: url('public/assets/icons/beianicon.png');
+  background-image: url('assets/icons/beianicon.png');
 }
 .item {
   @apply px-4 text-gray-400;

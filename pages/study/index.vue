@@ -216,7 +216,7 @@
 </template>
 
 <script setup lang="ts">
-import bg from 'public/assets/images/bg.png'
+import bg from 'assets/images/bg.png'
 
 const activeIndex = ref(0)
 

@@ -45,7 +45,7 @@ import type { SwiperItemType } from '@/components/types'
 
 import { useThemeStore } from '~/stores/useThemeStore'
 
-import bg from 'public/assets/images/bg.png'
+import bg from 'assets/images/bg.png'
 
 const store = useThemeStore()
 

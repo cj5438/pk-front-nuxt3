@@ -17,7 +17,14 @@
 
 <script setup lang="ts">
 // import md from '../test.md'
-import bg from 'public/assets/images/bg.png'
+import bg from 'assets/images/bg.png'
+
+// const { path } = useRoute()
+
+// const { data } = await useAsyncData(`content-${path}`, () =>
+//   queryContent().where({ _path: path }).findOne()
+// )
+// console.log('🚀 ~ file: index.vue:23 ~ data:', data)
 
 const activeIndex = inject<number>('activeIndex')
 

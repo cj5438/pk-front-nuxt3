@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import type { PartnerType, SwiperItemType } from '@/components/types'
-import bg from 'public/assets/images/bg.png'
+import bg from 'assets/images/bg.png'
 
 import { useThemeStore } from '~/stores/useThemeStore'
 
