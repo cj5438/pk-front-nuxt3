@@ -168,8 +168,7 @@
 // import { registerSW } from 'virtual:pwa-register'
 import { useThemeStore } from '~/stores/useThemeStore'
 import { useHomeStore } from '~/stores/useHomeStore'
-
-import type Swiper from 'swiper'
+import type { Swiper as SwiperType } from 'swiper'
 
 const store = useThemeStore()
 const homeStore = useHomeStore()
@@ -192,7 +191,7 @@ useAsyncData(async () => {
   console.log('🚀 ~ file: index.vue:192 ~ onBeforeMount ~ homeStore.swipers:', homeStore.swipers)
 })
 
-function handleSwiperChange(e: Swiper) {
+function handleSwiperChange(e: SwiperType) {
   const index = e.activeIndex
   selectItem.value = homeStore.swipers[index]
 }
