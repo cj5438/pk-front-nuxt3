@@ -185,11 +185,12 @@ const partners = ref([
   'https://wayearn.static.toimc.com/partner/logo7.png'
 ])
 
-useAsyncData(async () => {
-  await homeStore.fetchData()
-  selectItem.value = homeStore.swipers[0]
-  console.log('🚀 ~ file: index.vue:192 ~ onBeforeMount ~ homeStore.swipers:', homeStore.swipers)
-})
+// 不标准的 useFetch = useAsyncDat + $fetch
+// useAsyncData(async () => {
+await homeStore.fetchData()
+selectItem.value = homeStore.swipers[0]
+//   console.log('🚀 ~ file: index.vue:192 ~ onBeforeMount ~ homeStore.swipers:', homeStore.swipers)
+// })
 
 function handleSwiperChange(e: SwiperType) {
   const index = e.activeIndex

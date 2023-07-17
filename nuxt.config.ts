@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   runtimeConfig: {
     // env ->process.env.NODE_ENV
@@ -24,6 +25,9 @@ export default defineNuxtConfig({
         propsDestructure: true
       }
     }
+  },
+  devServer: {
+    port: parseInt(process.env.PORT || '')
   },
   css: ['@unocss/reset/tailwind.css'],
   pwa: {

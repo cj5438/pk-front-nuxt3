@@ -6,11 +6,15 @@ export default defineEventHandler(async (event) => {
   if (process.env.NODE_ENV === 'development') {
     // 2. 判断url -> /api Y -> redirect /mock
     const url = getRequestURL(event)
+    const whitelist = (process.env.MOCK_WHITELIST || '')?.split(',')
     // bugfix url.pathname与
-    if (url.pathname.indexOf('/api') !== -1 && url.pathname.indexOf('/api/_') === -1) {
-      console.log('in', url.pathname)
+    if (
+      url.pathname.indexOf('/api') !== -1 &&
+      url.pathname.indexOf('/api/_') === -1 &&
+      whitelist.indexOf(url.pathname) === -1
+    ) {
       const path = url.pathname.replace('/api', '/mock')
-      return await sendProxy(event, (process.env.BASE_URL || 'http://localhost:3000') + path)
+      return await sendProxy(event, `http://localhost:${process.env.PORT || 3000}${path}`)
     }
   }
 })
