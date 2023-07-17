@@ -43,7 +43,7 @@
 <script setup lang="ts">
 import type { Swiper as SwiperType } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Pagination } from 'swiper'
+import { Navigation, Pagination } from 'swiper/modules'
 
 // Import Swiper styles
 import 'swiper/css'

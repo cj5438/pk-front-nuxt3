@@ -5,6 +5,7 @@
     :freeMode="true"
     :space-between="50"
     :pagination="{ clickable: true }"
+    style="width: 100%"
     loop
     v-bind="$attrs"
   >
@@ -22,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { Pagination, FreeMode } from 'swiper'
+import { Pagination, FreeMode } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
 const { width } = useWindowSize()
