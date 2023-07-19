@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  sourcemap: false,
   runtimeConfig: {
     // env ->process.env.NODE_ENV
   },
