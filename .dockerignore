@@ -1,0 +1,10 @@
+.nuxt
+.output
+.github
+.git
+
+node_modules/
+.DS_Store
+
+.gitignore
+README.md
