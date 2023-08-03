@@ -9,20 +9,31 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
+    // 基础配置
     'eslint:recommended',
-    '@vue/eslint-config-typescript',
-    '@vue/eslint-config-prettier/skip-formatting',
+
+    // plugin配置
+    'plugin:vue/vue3-essential',
     'plugin:nuxt/recommended',
-    'plugin:@typescript-eslint/recommended'
+
+    // vue类型配置
+    '@vue/eslint-config-typescript',
+    // 风格配置
+    '@vue/eslint-config-prettier/skip-formatting'
   ],
-  parser: 'vue-eslint-parser',
   parserOptions: {
-    ecmaVersion: 'latest',
-    parser: '@typescript-eslint/parser'
+    ecmaVersion: 'latest'
   },
-  plugins: ['@typescript-eslint'],
   rules: {
     'vue/multi-word-component-names': 'off'
-  }
+  },
+  overrides: [
+    {
+      files: ['server/**/*.{ts,js}'],
+      extends: ['plugin:@typescript-eslint/recommended'],
+      parserOptions: {
+        parser: '@typescript-eslint/parser'
+      }
+    }
+  ]
 }
